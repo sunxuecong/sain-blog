@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="277px" height="298px" viewBox="0 0 277 298" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>nova-adminrt</title>
+    <defs>
+        <radialGradient cx="25.6639992%" cy="25.3040035%" fx="25.6639992%" fy="25.3040035%" r="63.6535837%" id="radialGradient-1">
+            <stop stop-color="#E8BC7D" offset="0%"></stop>
+            <stop stop-color="#AB7032" offset="92.75%"></stop>
+            <stop stop-color="#CCA062" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="20.145%" y1="20.786%" x2="82.629%" y2="87.458%" id="linearGradient-2">
+            <stop stop-color="#AB703F" offset="0%"></stop>
+            <stop stop-color="#C99453" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="23.554%" cy="27.739%" fx="23.554%" fy="27.739%" r="84.1419708%" id="radialGradient-3">
+            <stop stop-color="#855336" offset="0%"></stop>
+            <stop stop-color="#5E300D" offset="74.16%"></stop>
+            <stop stop-color="#A36733" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="27.4880102%" cy="24.5503045%" fx="27.4880102%" fy="24.5503045%" r="67.0049764%" gradientTransform="translate(0.274880,0.245503),scale(1.000000,0.914753),rotate(144.698156),translate(-0.274880,-0.245503)" id="radialGradient-4">
+            <stop stop-color="#E8BC7D" offset="0%"></stop>
+            <stop stop-color="#AB7032" offset="92.75%"></stop>
+            <stop stop-color="#CCA062" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="81.021405%" cy="41.3055227%" fx="81.021405%" fy="41.3055227%" r="68.9999564%" gradientTransform="translate(0.810214,0.413055),scale(0.882144,1.000000),rotate(-101.813609),translate(-0.810214,-0.413055)" id="radialGradient-5">
+            <stop stop-color="#E8BC7D" offset="0%"></stop>
+            <stop stop-color="#AB7032" offset="92.75%"></stop>
+            <stop stop-color="#CCA062" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nova-adminrt" transform="translate(0.000000, 0.750000)" fill-rule="nonzero">
+            <g id="编组" opacity="0.3" transform="translate(16.875000, 54.000000)" fill="#B77A33">
+                <g id="椭圆形">
+                    <circle cx="121.5" cy="121.5" r="121.5"></circle>
+                </g>
+            </g>
+            <path d="M227.8125,72.5625001 C216.975713,68.1189749 208.255725,61.7895 200.8125,50.625 C184.244625,50.625 170.784112,38.8908 163.6875,30.3750001 C155.25,20.25 149.52465,7.836075 148.5,1.6875 C131.625,18.5625 164.7,55.8562501 178.875,72.5625001 C200.517187,81.0421875 253.124999,96.1875 261.562501,77.6250001 C246.420225,79.1393626 236.631037,76.1784751 227.8125,72.5625001 Z" id="路径" fill="#B77A33"></path>
+            <path d="M195.75,50.625 C196.779713,50.625 197.802,50.5919251 198.815175,50.527125 C205.582725,68.3403749 222.813112,81 243,81 C249.898838,81 256.452412,79.5214126 262.362374,76.8639374 C271.572751,95.3930251 276.749999,116.279212 276.749999,138.375 C276.749999,214.797488 214.797488,276.749999 138.375,276.749999 C61.9525125,276.749999 0,214.797488 0,138.375 C0,61.9525125 61.9525125,0 138.375,0 C141.8121,0 145.219837,0.1252125 148.593825,0.371587501 C148.531725,1.36485 148.5,2.3662125 148.5,3.37499999 C148.5,29.4704999 169.6545,50.625 195.75,50.625 Z" id="路径" fill="url(#radialGradient-1)"></path>
+            <g id="编组" opacity="0.4" transform="translate(50.625000, 81.000000)" fill="url(#linearGradient-2)">
+                <g id="椭圆形">
+                    <circle cx="23.625" cy="23.625" r="23.625"></circle>
+                </g>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-3)" cx="74.25" cy="104.625" r="13.5"></circle>
+            <g id="编组" opacity="0.7" transform="translate(74.250000, 168.750000)" fill="url(#linearGradient-2)">
+                <g id="椭圆形">
+                    <circle cx="23.625" cy="23.625" r="23.625"></circle>
+                </g>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-3)" cx="97.875" cy="192.375" r="13.5"></circle>
+            <g id="编组" opacity="0.9" transform="translate(175.500000, 151.875000)" fill="url(#linearGradient-2)">
+                <g id="椭圆形">
+                    <circle cx="23.625" cy="23.625" r="23.625"></circle>
+                </g>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-3)" cx="199.125" cy="175.5" r="13.5"></circle>
+            <g id="编组" opacity="0.7" transform="translate(138.375000, 87.750000)" fill="url(#linearGradient-2)">
+                <g id="椭圆形">
+                    <circle cx="23.625" cy="23.625" r="23.625"></circle>
+                </g>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-3)" cx="162" cy="111.375" r="13.5"></circle>
+            <path d="M229.346437,36.3578624 L230.190525,40.577625 C231.92865,49.267575 241.181887,54.195075 249.362214,50.7866626 C256.8726,47.6573624 260.161874,38.8206 256.5216,31.5434249 L254.597176,27.6942374 C252.316011,23.1319125 247.652775,20.25 242.552138,20.25 C234.053887,20.25 227.679863,28.02465 229.346437,36.3578624 Z" id="路径" fill="url(#radialGradient-4)"></path>
+            <path d="M201.651525,11.9674125 L199.5327,11.5101 C195.168825,10.568475 191.03445,13.854375 190.966612,18.31815 C190.904512,22.4164125 194.3271,25.7097375 198.419962,25.4896876 L200.584688,25.3732499 C203.1507,25.2352124 205.418363,23.659425 206.442337,21.3026625 C208.148737,17.376525 205.836525,12.8705625 201.651525,11.9674125 Z" id="路径" fill="url(#radialGradient-5)"></path>
+            <g id="编组" opacity="0.3" style="mix-blend-mode: soft-light;" fill="#EBB76E">
+                <path d="M148.593825,0.371924999 C148.531725,1.36485 148.5,2.3662125 148.5,3.37499999 C148.5,29.46375 169.66125,50.625 195.75,50.625 C196.780387,50.625 197.803013,50.5919251 198.816862,50.527125 C205.586775,68.3376751 222.819188,81 243,81 C249.896139,81 256.448024,79.5214126 262.355625,76.8639374 C271.569374,95.3940374 276.749999,116.280562 276.749999,138.375 C276.749999,214.785 214.785,276.749999 138.375,276.749999 C61.9649999,276.749999 0,214.785 0,138.375 C0,61.9649999 61.9649999,0 138.375,0 C141.8121,0 145.219837,0.1252125 148.593825,0.371924999 Z" id="路径"></path>
+            </g>
+        </g>
+    </g>
+</svg>

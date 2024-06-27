@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="703px" height="742px" viewBox="0 0 703 742" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sain-admin</title>
+    <defs>
+        <radialGradient cx="52.4545305%" cy="48.8910746%" fx="52.4545305%" fy="48.8910746%" r="57.5297862%" gradientTransform="translate(0.524545,0.488911),scale(0.983817,1.000000),rotate(134.999980),translate(-0.524545,-0.488911)" id="radialGradient-1">
+            <stop stop-color="#95B071" offset="0%"></stop>
+            <stop stop-color="#44783E" offset="85.26%"></stop>
+            <stop stop-color="#75B068" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="26.2706497%" y1="17.7026306%" x2="73.7410279%" y2="78.3944659%" id="linearGradient-2">
+            <stop stop-color="#F5FFF2" offset="0%"></stop>
+            <stop stop-color="#FEFFFC" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="24.712679%" cy="22.1716685%" fx="24.712679%" fy="22.1716685%" r="109.894763%" gradientTransform="translate(0.247127,0.221717),scale(0.980080,1.000000),rotate(134.999994),translate(-0.247127,-0.221717)" id="radialGradient-3">
+            <stop stop-color="#967D56" offset="0%"></stop>
+            <stop stop-color="#0E1C03" offset="74.16%"></stop>
+            <stop stop-color="#73540D" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="25.3401248%" cy="25.3402221%" fx="25.3401248%" fy="25.3402221%" r="107.907184%" id="radialGradient-4">
+            <stop stop-color="#CC9B52" offset="0%"></stop>
+            <stop stop-color="#944A12" offset="74.16%"></stop>
+            <stop stop-color="#B08D3C" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sain-admin" transform="translate(0.943182, 0.000000)" fill-rule="nonzero">
+            <g id="编组" opacity="0.3" transform="translate(63.048103, 126.532212)" fill="#54BA3D">
+                <g id="椭圆形">
+                    <circle cx="307.733894" cy="307.733894" r="307.733894"></circle>
+                </g>
+            </g>
+            <path d="M624.66759,67.3977245 C481.490976,-75.9378849 229.797133,33.4555307 91.9058493,171.34596 C-45.9854345,309.237243 -17.7611075,478.417371 103.994663,600.17314 C165.419203,661.595973 236.245868,686.043719 312.463006,689.779267 C387.323549,693.44643 467.332652,668.468694 577.036364,569.93914 C686.739223,471.407877 767.844201,210.733333 624.66759,67.3977245 Z" id="路径" fill="url(#radialGradient-1)"></path>
+            <path d="M594.548988,55.189237 C454.092401,-55.864232 229.715926,45.092146 99.1068227,175.701249 C-31.5022806,306.310352 -9.63693267,456.270788 77.8971184,562.393677 C165.43117,668.519981 320.441006,634.405974 463.719343,525.647685 C606.997682,416.889399 735.002157,166.24356 594.548988,55.189237 Z" id="路径" fill="url(#linearGradient-2)"></path>
+            <g id="编组" opacity="0.9" style="mix-blend-mode: multiply;" transform="translate(181.246976, 154.479305)" fill="url(#radialGradient-3)">
+                <path d="M246.807718,25.8824033 C185.970437,-17.8337608 123.257689,-5.18589773 61.7040714,56.3685746 C0.150454342,117.922192 -25.2025445,184.744897 32.0299762,241.976563 C48.3920163,258.339458 123.431217,289.085493 208.487156,204.029555 C293.543949,118.973616 264.836651,44.1361521 246.807718,25.8824033 Z" id="路径" style="mix-blend-mode: multiply;"></path>
+            </g>
+            <path d="M427.79483,177.916933 C368.672311,118.794414 272.815767,118.794414 213.693247,177.916933 C154.570728,237.039453 154.570728,332.895996 213.693247,392.019371 C230.595531,408.921655 303.841327,431.458889 385.537838,349.762378 C467.235203,268.065012 444.697969,194.820072 427.79483,177.916933 Z" id="路径" fill="url(#radialGradient-4)"></path>
+            <g id="编组" opacity="0.2" style="mix-blend-mode: soft-light;" fill="#54BA3D">
+                <path d="M103.994663,600.17314 C165.419203,661.595973 236.245868,686.043719 312.463006,689.779267 C387.323549,693.44643 467.332652,668.468694 577.036364,569.93914 C686.739223,471.407877 767.844201,210.733333 624.66759,67.3977245 C481.490976,-75.9378849 229.797133,33.4555307 91.9058493,171.34596 C-45.9854345,309.237243 -17.7611075,478.417371 103.994663,600.17314 Z" id="路径"></path>
+            </g>
+        </g>
+    </g>
+</svg>

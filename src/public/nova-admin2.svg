@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1182px" height="1240px" viewBox="0 0 1182 1240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>葡萄</title>
+    <defs>
+        <linearGradient x1="4.84629292%" y1="-13.850042%" x2="99.2214406%" y2="80.5242313%" id="linearGradient-1">
+            <stop stop-color="#93BD66" offset="0%"></stop>
+            <stop stop-color="#B1DB97" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="40.128%" cy="34.955%" fx="40.128%" fy="34.955%" r="72.0186561%" id="radialGradient-2">
+            <stop stop-color="#805BAB" offset="0%"></stop>
+            <stop stop-color="#2D1D40" offset="70.85%"></stop>
+            <stop stop-color="#774BAD" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="72.014%" y1="81.413%" x2="21.636%" y2="21.647%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0.7" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="葡萄">
+            <g id="编组" opacity="0.3" transform="translate(141.476510, 341.208054)" fill="#661FB8" fill-rule="nonzero">
+                <g transform="translate(0.000000, -0.000000)" id="椭圆形">
+                    <circle cx="449.395973" cy="449.395973" r="449.395973"></circle>
+                </g>
+            </g>
+            <path d="M878.397691,280.175087 C894.567624,296.176913 920.625933,296.108671 936.71098,280.023624 L1062.45697,154.275973 C1078.60193,138.131007 1078.60193,111.954523 1062.45697,95.809557 C1046.31366,79.6645906 1020.13718,79.6645906 1003.99221,95.809557 L878.244564,221.557208 C862.039678,237.762094 862.109584,264.055087 878.397691,280.175087 Z" id="路径" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+            <path d="M858.131597,311.651114 C886.515114,339.959732 932.46502,339.928107 960.811919,311.582872 C989.18545,283.209342 989.18545,237.206174 960.811919,208.832644 L936.524564,184.545289 C908.141047,156.163436 862.124564,156.163436 833.741047,184.545289 C805.332564,212.955436 805.362523,259.025181 833.810953,287.397047 L858.131597,311.651114 Z" id="路径" fill="#4A385E" fill-rule="nonzero"></path>
+            <g id="编组" transform="translate(649.127517, 499.328859)" fill-rule="nonzero">
+                <circle id="椭圆形" fill="url(#radialGradient-2)" cx="249.66443" cy="249.66443" r="249.66443"></circle>
+                <circle id="椭圆形" fill-opacity="0.6" fill="#170E2E" cx="249.66443" cy="249.66443" r="249.66443"></circle>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-2)" fill-rule="nonzero" cx="249.66443" cy="682.416107" r="249.66443"></circle>
+            <g id="编组" transform="translate(399.463087, 599.194631)" fill-rule="nonzero">
+                <circle id="椭圆形" fill="url(#radialGradient-2)" cx="249.66443" cy="249.66443" r="249.66443"></circle>
+                <circle id="椭圆形" fill-opacity="0.3" fill="#170E2E" cx="249.66443" cy="249.66443" r="249.66443"></circle>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-2)" fill-rule="nonzero" cx="316.241611" cy="965.369128" r="249.66443"></circle>
+            <circle id="椭圆形" fill="url(#radialGradient-2)" fill-rule="nonzero" cx="282.95302" cy="249.66443" r="249.66443"></circle>
+            <g id="编组" opacity="0.8" transform="translate(133.154362, 99.865772)" fill="url(#linearGradient-3)" fill-rule="nonzero">
+                <circle id="椭圆形" cx="49.9328859" cy="49.9328859" r="49.9328859"></circle>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-2)" fill-rule="nonzero" cx="932.080537" cy="499.328859" r="249.66443"></circle>
+            <g id="编组" transform="translate(249.664430, 349.530201)" fill-rule="nonzero">
+                <circle id="椭圆形" fill="url(#radialGradient-2)" cx="249.66443" cy="249.66443" r="249.66443"></circle>
+                <g opacity="0.3" transform="translate(99.865772, 99.865772)" fill="url(#linearGradient-3)" id="椭圆形">
+                    <circle cx="49.9328859" cy="49.9328859" r="49.9328859"></circle>
+                </g>
+            </g>
+            <circle id="椭圆形" fill="url(#radialGradient-2)" fill-rule="nonzero" cx="649.127517" cy="249.66443" r="249.66443"></circle>
+            <g id="编组" opacity="0.8" transform="translate(549.261745, 66.577181)" fill="url(#linearGradient-3)" fill-rule="nonzero">
+                <circle id="椭圆形" cx="49.9328859" cy="49.9328859" r="49.9328859"></circle>
+            </g>
+            <g id="编组" opacity="0.8" transform="translate(166.442953, 815.570470)" fill="url(#linearGradient-3)" fill-rule="nonzero">
+                <circle id="椭圆形" cx="49.9328859" cy="49.9328859" r="49.9328859"></circle>
+            </g>
+            <g id="编组" opacity="0.3" style="mix-blend-mode: soft-light;" fill="#661FB8">
+                <path d="M282.95302,0 C145.138255,0 33.2885906,111.849664 33.2885906,249.66443 C33.2885906,335.718765 76.8983087,411.648376 143.209181,456.546362 C58.5895839,496.527624 0,582.671839 0,682.416107 C0,757.317101 33.0389262,824.548403 85.3269799,870.323544 C73.2448859,899.624161 66.5771812,931.722685 66.5771812,965.369128 C66.5771812,1103.18389 178.426846,1215.03356 316.241611,1215.03356 C415.140349,1215.03356 500.668725,1157.43264 541.084403,1073.97149 C573.783785,1089.70534 610.432859,1098.52349 649.127517,1098.52349 C732.700188,1098.52349 806.724027,1057.39211 852.048107,994.283597 C867.191087,997.154738 882.816752,998.657718 898.791946,998.657718 C1036.60671,998.657718 1148.45638,886.808054 1148.45638,748.993289 C1148.45638,714.825879 1141.58062,682.252993 1129.13901,652.586201 C1162.10303,610.273074 1181.74497,557.081235 1181.74497,499.328859 C1181.74497,372.664107 1087.2603,267.931544 964.972993,251.814872 L1062.5302,154.259329 C1070.29809,146.491436 1074.65224,136.015517 1074.65224,124.952054 C1074.53573,114.006765 1070.17992,103.53251 1062.41203,95.7646174 C1046.2887,79.6412886 1020.16048,79.6412886 1004.03715,95.7646174 L894.802309,204.999463 C873.728966,88.4727517 771.697772,0 649.127517,0 C576.813047,0 511.648966,30.7952752 466.040268,79.9791678 C420.43157,30.7952752 355.26749,0 282.95302,0 Z" id="路径"></path>
+            </g>
+        </g>
+    </g>
+</svg>
