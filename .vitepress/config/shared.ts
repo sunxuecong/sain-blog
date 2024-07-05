@@ -13,7 +13,7 @@ export const shared = defineConfig({
 
   /* prettier-ignore */
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/Sain-admin.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/sain-admin.svg' }],
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-JYHD4M2FMM' }],
     [
       'script',

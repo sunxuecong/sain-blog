@@ -2,7 +2,7 @@
 
 ## 环境准备
 
-Nova-admin是基于最新Vite版本开发，所以需要[Node.js](https://nodejs.org/en/) 20.x 版本来支持。
+Sain-admin是基于最新Vite版本开发，所以需要[Node.js](https://nodejs.org/en/) 20.x 版本来支持。
 包管理器推荐使用 [pnpm](https://pnpm.io/) 8.x 版本
 
 - [环境准备详细教程](/zh/dev/nodejs)

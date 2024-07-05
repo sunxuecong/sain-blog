@@ -3,20 +3,20 @@ layout: home
 
 hero:
   name: "Sain-admin"
-  text: "一个简洁、干净的中后台管理模板"
-  tagline: Vue3、Vite5、TypeScript、NaiveUI、Unocss
+  text: "专注 & 洞察 & 分享"
+  tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
   image:
       src: /sain-admin.svg
       alt: Sain-admin
   actions:
     - theme: brand
-      text: 了解Sain-admin
+      text: 快速开始
       link: /zh/guide/introduction
     - theme: alt
-      text: Github
+      text: 在Github查看
       link: https://github.com/chansee97/sain-admin
     - theme: alt
-      text: 在线预览
+      text: 听点音乐
       link: https://github.com/chansee97/sain-admin
 
 features:
