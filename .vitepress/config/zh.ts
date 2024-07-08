@@ -8,6 +8,29 @@ export const zh = defineConfig({
     nav: nav(),
 
     sidebar: {
+      "/zh/frontend/": {
+        base: "/zh/frontend/",
+        items: [
+          {
+            text: "JavaScript 基础知识",
+            items: [
+              { text: "原型与原型链详解", link: "js/prototypeChain" },
+              { text: "JavaScript手写代码汇总", link: "js/handwriting" }
+            ],
+          },
+          {
+            text: "ES6 常用知识点",
+            link: "index"
+          },
+          {
+            text: "TypeScript",
+            items: [
+              { text: "基础知识", link: "js/base" },
+              { text: "工具类型", link: "js/tool" }
+            ],
+          },
+        ],
+      },
       // "/zh/guide/": { base: "/zh/guide/", items: sidebarGuide() },
       "/zh/other/": { base: "/zh/other/", items: sidebarReference() },
       "/zh/dev/": { base: "/zh/dev/", items: sidebarEnv() },
@@ -52,11 +75,16 @@ export const zh = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
   return [
-    // {
-    //   text: "指南",
-    //   link: "/zh/guide/introduction",
-    //   activeMatch: "/zh/guide/",
-    // },
+    {
+      text: "前端",
+      link: "/zh/frontend/js/prototypeChain",
+      activeMatch: "/zh/frontend/",
+    },
+    {
+      text: "指南",
+      link: "/zh/guide/introduction",
+      activeMatch: "/zh/guide/",
+    },
     {
       text: "开发配置",
       link: "/zh/dev/git",
@@ -95,44 +123,6 @@ function nav(): DefaultTheme.NavItem[] {
   ];
 }
 
-
-
-
-
-// function sidebarGuide(): DefaultTheme.NavItem[] {
-//   return [
-//     {
-//       text: "指南",
-//       items: [
-//         { text: "介绍", link: "introduction" },
-//         { text: "快速开始", link: "get-start" },
-//         { text: "目录结构", link: "directory-structure" },
-//       ],
-//     },
-//     {
-//       text: "基本配置",
-//       items: [
-//         { text: "请求服务配置", link: "service" },
-//         { text: "路由和菜单", link: "modify-routers" },
-//         { text: "自定义主题", link: "custom-theme" },
-//         { text: "权限控制", link: "permission-control" },
-//         { text: "环境变量", link: "env-variable" },
-//       ],
-//     },
-//     {
-//       text: "扩展使用",
-//       items: [
-//         { text: "使用图标", link: "use-icons" },
-//         { text: "国际化(i18n)", link: "i18n" },
-//         { text: "UnoCSS", link: "unocss" },
-//       ],
-//     },
-//     {
-//       text: "相关内容",
-//       items: [{ text: "配套后端项目", link: "backend-project" }],
-//     },
-//   ];
-// }
 function sidebarReference(): DefaultTheme.NavItem[] {
   return [
     {
@@ -147,7 +137,7 @@ function sidebarEnv(): DefaultTheme.NavItem[] {
       text: "开发工具",
       items: [
         { text: "vscode插件", link: "vc-plugins" },
-        { text: "便利工具", link: "awesome-tools" }
+        { text: "便利工具", link: "awesome-tools" },
       ],
     },
     {
