@@ -15,7 +15,8 @@ export const zh = defineConfig({
             text: "JavaScript 基础知识",
             items: [
               { text: "原型与原型链详解", link: "js/prototypeChain" },
-              { text: "JavaScript手写代码汇总", link: "js/handwriting" }
+              { text: "JavaScript手写代码汇总", link: "js/handwriting" },
+              { text: "前端代码规范", link: "js/specification" }
             ],
           },
           {
