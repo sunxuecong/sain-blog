@@ -1,5 +1,7 @@
 # 前端代码规范
 
+代码千万行，安全第一行；前端不规范，同事两行泪。
+
 ## 一、文件命名规范
 
 ### 1. 常见名称形式
@@ -30,10 +32,9 @@ top.png
 logo_police.jpg
 logo_national.gif
 pic_people.jpg
-pic_TV.jpg
 ```
 
-**注： 文件名称中禁止出现中文**
+**注： 文件名称中禁止出现中文，禁止使用特殊字符**
 
 ### JS、CSS、LESS、HTML、VUE  文件命名
 
@@ -116,7 +117,7 @@ function hello (name) {
 
 ### 分号
 
-代码不允许使用分号，但如果代码是以 `(` 或 `[` 开头的，则需要加分号，否则会解析报错。🌰 :
+语句结束**不使用**分号，但如果代码是以 `(` 或 `[` 开头的，则需要加分号，否则会解析报错。🌰 :
 
 ```js
 // good
@@ -207,7 +208,7 @@ num.toString();
 String(num);
 ```
 
-##### [建议] 转换成 `number` 时，通常使用 `+`。🌰 ：
+##### [建议] 转换成 `number` 时，使用 `+`。🌰 ：
 
 ```javascript
 // good
@@ -401,6 +402,20 @@ function foo() {
 }
 ```
 
+## 图片处理
+
+#### 图片优化
+
+1. 图片体积不能超过300K
+2. JPG图片必须压缩，一般80%品质即可，保证文字清晰
+3. 透明PNG图片必须使用[压缩工具](https://tinypng.com/)压缩后提供
+
+#### 图片标签
+
+1. PC端img图片必须填写`width`、`height`属性
+
+2. 移动端必须填写`alt`属性
+
 
 
 ## 四、 Vue 项目规范
@@ -462,7 +477,7 @@ function foo() {
 
 我们可以这样做：
 
-- 为了过滤一个列表中的项目 (比如 `v-for="user in users" v-if="user.isActive"`)。在这种情形下，请将 `users` 替换为一个计算属性 (比如 `activeUsers`)，让其返回过滤后的列表。
+- 为了过滤一个列表中的项目 (比如 `v-for="user in users" v-if="user.isActive"`)。在这种情形下，请将 `users` 替换为一个**计算属性** (比如 `activeUsers`)，让其返回过滤后的列表。
 
 ```vue
 computed: {
@@ -606,9 +621,7 @@ export default {
 
 ### 不要打破 vue 的单向数据流
 
-数据 count 从父组件流向子组件，子组件不能直接修改 count，而是通过事件通知父组件，父组件接收到事件后再修改数据。
-
-看🌰 :
+数据 count 从父组件流向子组件，子组件不能直接修改 count，而是通过事件通知父组件，父组件接收到事件后再修改数据。🌰 :
 
 ```vue
 <template>
@@ -664,21 +677,29 @@ export default {
 </script>
 ```
 
+### 单文件代码行数（重要）
+
+**[重要]** **[强制要求]** 目前已存代码先不算，新添加的文件单个文件不允许超过**1000**行，特别复杂的功能，文件不允许超过**1500**行!
+
+逻辑不要全部都写在一个组件，该拆成组件的一定要组件。否则后期难以维护。
+
 ### 其他
 
 - 避免 this.$parent。
 - 调试信息 console.log() debugger 使用完及时删除。
 - 组件卸载时，一定要清除之前前添加的事件监听器。
 
+
+
 ## 五、Git 规范
 
 ### 请先看说明：
 
-说明：由于咱们的项目开发流程比较简单，下面的git工作流咱们并不能很好的贯彻，但我还是整理了一下。
+说明：由于咱们的项目开发流程相对简单，下面的git工作流咱们并不能很好的贯彻，但我还是整理了一下。
 
-#### 												**下面的内容仅供参考，不做要求**
+### **下面的内容仅供参考，不做要求。**
 
-![img](https://woai3c.github.io/front-end-specification/assets/img/git-flow.e5218e44.png)
+![img](https://cdn.jsdelivr.net/gh/sunxuecong/static/git_flow.png)
 
 
 
@@ -739,7 +760,7 @@ git commit -m 'this is a test'
 
 commit message 就是对你这次的代码提交进行一个简单的说明，好的提交说明可以让人一眼就明白这次代码提交做了什么。
 
-![img](https://img-blog.csdnimg.cn/img_convert/6ddb0c3a6a923d70d4d8a72229a2e9b6.png)
+![img](https://cdn.jsdelivr.net/gh/sunxuecong/static/git_demo.png)
 
 既然明白了 commit message 的重要性，那我们就更要好好的学习一下 commit message 规范。下面让我们看一下 commit message 的格式：
 
@@ -844,14 +865,92 @@ chore: 将表格中的查看详情改为详情
 
 其他类型的 commit 和上面三个示例差不多，在此不再赘述。
 
+
+
 ## 六、规范验证与代码格式化
 
-待完善。。。
+为保证团队中代码风格统一，以及更方便的格式化代码。推荐使用**Prettier**作为代码格式化工具。
+
+**[Prettier](https://www.prettier.cn/)**: 是一个目前市面上最流行的代码格式化工具。可以格式化 JavaScript、TypeScript、CSS、HTML、VUE、REACT 等语言的代码格式化工具。
+
+### 在vscode 中使用Prettier
+
+在 vscode 扩展商店搜索Prettier ，选择第一条然后安装。
 
 
 
+![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_home.png)
+
+在项目根目录 下创建一个`.prettierrc`的文件用于配置格式化的规则。
 
 
-## 七、 写在最后
 
-目前已存代码先不算，新添加的文件单个文件不允许超过**1000**行，特别复杂的功能，文件不允许超过**1500**行
+![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_edit.png)
+
+下面是我已经写好的规则。可以直接复制到项目`.prettierrc`文件中。
+
+```json
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "quoteProps": "as-needed",
+  "vueIndentScriptAndStyle": false,
+  "endOfLine": "lf",
+  "jsxSingleQuote": true,
+  "embeddedLanguageFormatting": "auto",
+  "requirePragma": false,
+  "insertPragma": false,
+  "htmlWhitespaceSensitivity": "ignore",
+  "proseWrap": "preserve"
+}
+```
+
+解释
+
+```js
+{
+  "printWidth": 180, // 指定打印机将换行的行长度
+  "tabWidth": 2, // 每个缩进层级使用 4 个空格
+  "useTabs": false, // 使用空格缩进而不是 tab 缩进
+  "semi": false, // 在语句末尾打印分号
+  "singleQuote": true,  // 是否使用单引号替代双引号
+  "trailingComma": "none", //末尾是否加上逗号
+  "arrowParens": "avoid",  // 当箭头函数只有一个参数是否加括号
+  "bracketSpacing": true,  // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
+  "bracketSameLine": false,  // 把多行HTML元素的>放在最后一行的末尾，而不是单独放在下一行(不适用于自关闭元素)。
+  "quoteProps": "as-needed", //仅在必需时为对象的key添加引号
+  "vueIndentScriptAndStyle": false, //不对vue中的script及style标签缩进
+  "endOfLine": "lf", //结束行形式
+  "jsxSingleQuote": true, // jsx中使用单引号
+  "embeddedLanguageFormatting": "auto", //对引用代码进行格式化
+  "requirePragma": false, //无需顶部注释即可格式化
+  "insertPragma": false,  //在已被preitter格式化的文件顶部加上标注
+  // "htmlWhitespaceSensitivity": "css",
+  "htmlWhitespaceSensitivity": "ignore", //对HTML全局空白不敏感
+  "proseWrap": "preserve" //
+}
+
+```
+
+### 设置为默认格式化程序。
+
+![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_default.jpg)
+
+### 设置保存自动格式化：
+
+​![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_onsave.png)
+
+
+
+### 注：
+
+- 基于咱们目前的项目，Eslint 和 git钩子 暂时不作要求，使用的话可能会给咱们带来很多困难和问题，反而影响效率。
+
+- 后面如果从 0 开始的新项目的话，也会给提供一份解决方案，代码必须符合规范才能提交到远程仓库。
