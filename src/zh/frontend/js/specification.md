@@ -4,7 +4,7 @@
 
 ## 一、文件命名规范
 
-### 1. 常见名称形式
+### 1. 常见名称形式 
 
 命名规范是编程规范中最重要的一部分，它直接影响到代码的可读性和可维护性
 
@@ -750,7 +750,7 @@ chore: 修改按钮样式及文字
 1. 版本号命名，适合移动端 APP 或组件库
 2. 用时间+当天发布次数命名，例如 20230319-1，这种命名方式一般用于业务项目。
 
-## Git Commit Message 规范
+### Git Commit Message 规范
 
 git 在每次提交时，都需要填写 commit message。
 
@@ -945,7 +945,7 @@ chore: 将表格中的查看详情改为详情
 
 ### 设置保存自动格式化：
 
-​![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_onsave.png)
+![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_onsave.png)
 
 
 
