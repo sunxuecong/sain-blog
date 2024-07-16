@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-
   "scripts": {
     "dev": "vitepress dev --host",
     "build": "vitepress build",
@@ -12,6 +11,15 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "lodash-es": "^4.17.15",
+    "element-ui": "^2.10.1",
+    "@better-scroll/core": "^2.0.0-alpha.20",
+    "@better-scroll/mouse-wheel": "^2.0.0-alpha.20",
+    "@better-scroll/scroll-bar": "^2.0.0-alpha.20",
+    "axios": "^0.21.1",
+    "better-scroll": "^1.15.2",
+    "less": "^4.2.0",
+    "sass": "^1.77.8",
     "vitepress": "^1.0.1"
   }
 }

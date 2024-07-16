@@ -1,2 +1,6 @@
-- 我说 md
-- 我是 md
+<script setup>
+import CustomComponent from './CustomComponent.vue'
+</script>
+
+<CustomComponent />
+
