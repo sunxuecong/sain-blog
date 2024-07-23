@@ -8,6 +8,7 @@ import {
   getCurrentInstance,
   getCurrentScope,
   h,
+  init_vue_runtime_esm_bundler,
   inject,
   isReactive,
   isReadonly,
@@ -33,9 +34,12 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-4PLNDSGI.js";
+} from "./chunk-33D6ACFQ.js";
+import "./chunk-V4OQ3NZ2.js";
 
-// ../../../node_modules/.pnpm/vitepress@1.2.3_@algolia+client-search@4.24.0_postcss@8.4.38_search-insights@2.14.0/node_modules/vitepress/lib/vue-demi.mjs
+// node_modules/vitepress/lib/vue-demi.mjs
+init_vue_runtime_esm_bundler();
+init_vue_runtime_esm_bundler();
 var isVue2 = false;
 var isVue3 = true;
 function set(target, key, val) {
@@ -55,7 +59,7 @@ function del(target, key) {
   delete target[key];
 }
 
-// ../../../node_modules/.pnpm/@vueuse+shared@10.11.0_vue@3.4.30/node_modules/@vueuse/shared/index.mjs
+// node_modules/@vueuse/core/node_modules/@vueuse/shared/index.mjs
 function computedEager(fn, options) {
   var _a;
   const result = shallowRef();
@@ -1552,7 +1556,7 @@ function whenever(source, cb, options) {
   return stop;
 }
 
-// ../../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.30/node_modules/@vueuse/core/index.mjs
+// node_modules/@vueuse/core/index.mjs
 function computedAsync(evaluationCallback, initialState, optionsOrRef) {
   let options;
   if (isRef(optionsOrRef)) {
