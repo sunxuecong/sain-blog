@@ -3,9 +3,7 @@ import axios from 'axios'
 const BASE_URL = 'https://mu-api.yuk0.com/'
 
 
-function isDef(v) {
-  return v !== undefined && v !== null
-}
+
 export const request = createBaseInstance()
 mixinLoading(request.interceptors)
 // 通用的axios实例
