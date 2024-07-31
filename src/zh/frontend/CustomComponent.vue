@@ -2,15 +2,42 @@
   <div class="paly-song-container">
     <div class="song">
       <div class="left">
-        <img class="play-bar-support" src="./image/play-bar-support.png" />
-        <img :class="{ playing }" class="play-bar" src="./image/play-bar.png" />
-        <div class="img-outer-border" ref="disc">
-          <div :class="{ paused: !playing }" class="img-outer" ref="discRotate">
-            <div class="img-wrap">
-              <img :src="genImgUrl(currentSong.img, 400)" />
+        <div class="left-top">
+          <img class="play-bar-support" src="./image/play-bar-support.png" />
+          <img :class="{ playing }" class="play-bar" src="./image/play-bar.png" />
+          <div class="img-outer-border" ref="disc">
+            <div :class="{ paused: !playing }" class="img-outer" ref="discRotate">
+              <div class="img-wrap">
+                <img :src="genImgUrl(currentSong.img, 400)" />
+              </div>
             </div>
           </div>
         </div>
+        <div class="progress-bar-container">
+          <ProgressBar :percent="playedPercent" @percentChange="onProgressChange" />
+        </div>
+        <div class="control">
+          <!-- <Button type="primary">主要按钮</Button> -->
+          <!-- <button class="play" @click="togglePlaying">
+            {{ playing ? "暂停" : "播放" }}
+          </button> -->
+          <img @click="togglePlaying" v-show="!playing" :src="play" alt="">
+          <img @click="togglePlaying" v-show="playing" :src="pause" alt="">
+          <img :src="share" alt="">
+
+
+
+
+
+          <!-- 播放时间：{{ currentTime }} -->
+        </div>
+        <audio
+          :src="currentSong.url"
+          @canplay="ready"
+          @ended="end"
+          @timeupdate="updateTime"
+          ref="audio"
+        ></audio>
       </div>
       <div class="right">
         <div class="name-wrap">
@@ -31,7 +58,7 @@
           ref="scroller"
           v-else
         >
-          <div>
+          <div class="lyric-item-continer">
             <div
               :class="getActiveCls(index)"
               :key="index"
@@ -51,25 +78,13 @@
         </Scroller>
       </div>
     </div>
-    <ProgressBar :percent="playedPercent" @percentChange="onProgressChange" />
-    <div class="control">
-      <!-- <Button type="primary">主要按钮</Button> -->
-      <button class="play" @click="togglePlaying">
-        {{ playing ? "暂停" : "播放" }}
-      </button>
-      <!-- 播放时间：{{ currentTime }} -->
-    </div>
-    <audio
-      :src="currentSong.url"
-      @canplay="ready"
-      @ended="end"
-      @timeupdate="updateTime"
-      ref="audio"
-    ></audio>
   </div>
 </template>
 
 <script>
+import play from './image/play.svg'
+import pause from './image/pause.svg'
+import share from './image/share.svg'
 import lyricParser from "./utils/lrcparse.js";
 function isDef(v) {
   return v !== undefined && v !== null;
@@ -100,6 +115,9 @@ export default {
   },
   data() {
     return {
+      play,
+      pause,
+      share,
       lyric: [],
       nolyric: true,
       // 当前播放歌曲
@@ -314,77 +332,85 @@ $img-outer-d: 300px;
 
 .paly-song-container {
   width: 100%;
-  // background-color: pink;
+  overflow: hidden;
   .song {
-    height: 500px;
-    max-width: 870px;
+    height: 520px;
+    // max-width: 870px;
     margin: auto;
-    // border: 1px solid #ccc;
     display: flex;
     .left {
-      position: relative;
-      padding: 80px 70px 0 $img-left-padding;
-      display: flex;
-      justify-content: center;
+      .left-top{
+        width: 100%;
+        position: relative;
+        padding: 80px 70px 0 $img-left-padding;
+        display: flex;
+        justify-content: center;
 
-      $support-d: 30px;
-      $support-d-half: $support-d / 2;
-      .play-bar-support {
-        position: absolute;
-        left: $img-left-padding + $img-outer-border-d / 2 - $support-d / 2;
-        top: -$support-d-half;
-        width: $support-d;
-        height: $support-d;
-        z-index: 2;
-      }
-
-      .play-bar {
-        $w: 100px;
-        $h: 146px;
-        position: absolute;
-        top: 0;
-        left: $img-left-padding + $img-outer-border-d / 2 - 6px;
-        width: $w;
-        height: $h;
-        z-index: 1;
-        transform-origin: 0 0;
-        transform: rotate(-30deg);
-        transition: all 0.3s;
-
-        &.playing {
-          transform: rotate(5deg);
+        $support-d: 30px;
+        $support-d-half: $support-d / 2;
+        .play-bar-support {
+          position: absolute;
+          left: $img-left-padding + $img-outer-border-d / 2 - $support-d / 2;
+          top: -$support-d-half;
+          width: $support-d;
+          height: $support-d;
+          z-index: 2;
         }
-      }
 
-      .img-outer-border {
-        @include round($img-outer-border-d);
-        @include flex-center;
-        background: var(--song-shallow-grey-bg);
+        .play-bar {
+          $w: 100px;
+          $h: 146px;
+          position: absolute;
+          top: 0;
+          left: $img-left-padding + $img-outer-border-d / 2 - 6px;
+          width: $w;
+          height: $h;
+          z-index: 1;
+          transform-origin: 0 0;
+          transform: rotate(-30deg);
+          transition: all 0.3s;
 
-        .img-outer {
-          @include round($img-outer-d);
-          @include flex-center;
-          background: #000;
-          background: linear-gradient(-45deg, #333540, #070708, #333540);
-          animation: rotate 20s linear infinite;
-
-          &.paused {
-            animation-play-state: paused;
+          &.playing {
+            transform: rotate(5deg);
           }
+        }
 
-          .img-wrap {
-            @include img-wrap(200px);
+        .img-outer-border {
+          @include round($img-outer-border-d);
+          @include flex-center;
+          background: var(--song-shallow-grey-bg);
 
-            img {
-              border-radius: 50%;
+          .img-outer {
+            @include round($img-outer-d);
+            @include flex-center;
+            background: #000;
+            background: linear-gradient(-45deg, #333540, #070708, #333540);
+            animation: rotate 20s linear infinite;
+
+            &.paused {
+              animation-play-state: paused;
+            }
+
+            .img-wrap {
+              @include img-wrap(200px);
+
+              img {
+                border-radius: 50%;
+              }
             }
           }
         }
       }
+      .progress-bar-container {
+        width: 100%;
+        // background-color: pink;
+        box-sizing: border-box;
+        padding: 16px 30px;
+      }
     }
 
     .right {
-      background-color: pink;
+      // background-color: yellow;
       flex: 1;
       padding-top: 5px;
       .name-wrap {
@@ -432,7 +458,7 @@ $img-outer-d: 300px;
       }
 
       .lyric-wrap {
-        width: 380px;
+        // width: 380px;
         height: 350px;
         mask-image: linear-gradient(
           180deg,
@@ -443,10 +469,14 @@ $img-outer-d: 300px;
           hsla(0, 0%, 100%, 0.6) 85%,
           hsla(0, 0%, 100%, 0)
         );
-
+        .lyric-item-continer {
+          // padding-left: 10px;
+        }
         .lyric-item {
           margin-bottom: 16px;
           font-size: $font-size-sm;
+          // display: flex;
+          // justify-content: center;
 
           &.active {
             font-size: $font-size;
@@ -473,6 +503,29 @@ $img-outer-d: 300px;
 
       box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     }
+    >img {
+      width: 48px;
+      height: 48px;
+      background-color: pink;
+    }
   }
+}
+
+
+
+/* 当屏幕宽度小于768px时应用此样式 */
+@media (max-width: 767px) {
+    .paly-song-container {
+    .song {
+      .left{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+      }
+      .right{
+        display: none;
+      }
+    }
+    }
 }
 </style>
