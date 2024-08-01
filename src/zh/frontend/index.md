@@ -9,8 +9,8 @@ import CustomComponent from './CustomComponent.vue'
 
 
 
-<style scoped>
-h2 {
-  color: red;
+<style>
+.VPDoc {
+  padding-top: 0 !important;
 }
 </style>

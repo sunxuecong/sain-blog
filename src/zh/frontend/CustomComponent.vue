@@ -4,9 +4,17 @@
       <div class="left">
         <div class="left-top">
           <img class="play-bar-support" src="./image/play-bar-support.png" />
-          <img :class="{ playing }" class="play-bar" src="./image/play-bar.png" />
+          <img
+            :class="{ playing }"
+            class="play-bar"
+            src="./image/play-bar.png"
+          />
           <div class="img-outer-border" ref="disc">
-            <div :class="{ paused: !playing }" class="img-outer" ref="discRotate">
+            <div
+              :class="{ paused: !playing }"
+              class="img-outer"
+              ref="discRotate"
+            >
               <div class="img-wrap">
                 <img :src="genImgUrl(currentSong.img, 400)" />
               </div>
@@ -14,21 +22,16 @@
           </div>
         </div>
         <div class="progress-bar-container">
-          <ProgressBar :percent="playedPercent" @percentChange="onProgressChange" />
+          <ProgressBar
+            :percent="playedPercent"
+            @percentChange="onProgressChange"
+          />
         </div>
         <div class="control">
-          <!-- <Button type="primary">主要按钮</Button> -->
-          <!-- <button class="play" @click="togglePlaying">
-            {{ playing ? "暂停" : "播放" }}
-          </button> -->
-          <img @click="togglePlaying" v-show="!playing" :src="play" alt="">
-          <img @click="togglePlaying" v-show="playing" :src="pause" alt="">
-          <img :src="share" alt="">
-
-
-
-
-
+          <img @click="togglePlaying" v-show="!playing" :src="playImg" alt="" />
+          <img @click="togglePlaying" v-show="playing" :src="pauseImg" alt="" />
+          <img :src="share" alt="" />
+          <img :src="lyricImg" alt="" class="lyric-show" @click="showLyric" />
           <!-- 播放时间：{{ currentTime }} -->
         </div>
         <audio
@@ -40,10 +43,10 @@
         ></audio>
       </div>
       <div class="right">
-        <div class="name-wrap">
+        <div class="name-wrap" @click="showCover">
           <p class="name">{{ currentSong.name }}</p>
         </div>
-        <div class="desc">
+        <div class="desc" @click="showCover">
           <div class="desc-item">
             <span class="label">歌手：</span>
             <div class="value">{{ currentSong.artistsText }}</div>
@@ -52,7 +55,7 @@
         <empty v-if="nolyric">还没有歌词哦~</empty>
         <Scroller
           :data="lyric"
-          :options="{ disableTouch: true }"
+          :options="{ disableTouch: false }"
           @init="onInitScroller"
           class="lyric-wrap"
           ref="scroller"
@@ -82,9 +85,10 @@
 </template>
 
 <script>
-import play from './image/play.svg'
-import pause from './image/pause.svg'
-import share from './image/share.svg'
+import lyricImg from "./image/lyricImg.svg";
+import playImg from "./image/play.svg";
+import pauseImg from "./image/pause.svg";
+import share from "./image/share.svg";
 import lyricParser from "./utils/lrcparse.js";
 function isDef(v) {
   return v !== undefined && v !== null;
@@ -115,8 +119,9 @@ export default {
   },
   data() {
     return {
-      play,
-      pause,
+      lyricImg,
+      playImg,
+      pauseImg,
       share,
       lyric: [],
       nolyric: true,
@@ -137,7 +142,6 @@ export default {
       currentTime: 0,
       // 播放状态
       playing: false,
-      currentTime: 0,
       songReady: false,
     };
   },
@@ -159,6 +163,20 @@ export default {
     },
   },
   methods: {
+    showLyric() {
+      const left = document.querySelector(".left");
+      const right = document.querySelector(".right");
+      left.style.width = "0px";
+      right.style.width = "99vw";
+      console.log("left: ", left);
+    },
+    showCover() {
+      const left = document.querySelector(".left");
+      const right = document.querySelector(".right");
+      left.style.width = "100%";
+      right.style.width = "0px";
+      console.log("left: ", left);
+    },
     clearTimer(type) {
       this.lyricTimer[type] && clearTimeout(this.lyricTimer[type]);
     },
@@ -166,6 +184,7 @@ export default {
       return this.activeLyricIndex === index ? "active" : "";
     },
     onInitScroller(scoller) {
+      console.log("走了 init");
       const onScrollStart = (type) => {
         this.clearTimer(type);
         this.lyricScrolling[type] = true;
@@ -326,34 +345,28 @@ export default {
   }
 }
 
-$img-left-padding: 36px;
-$img-outer-border-d: 320px;
-$img-outer-d: 300px;
-
 .paly-song-container {
   width: 100%;
+  height: 520px;
   overflow: hidden;
   .song {
-    height: 520px;
-    // max-width: 870px;
+    height: 100%;
     margin: auto;
     display: flex;
     .left {
-      .left-top{
+      overflow: hidden;
+      height: 100%;
+      .left-top {
         width: 100%;
         position: relative;
-        padding: 80px 70px 0 $img-left-padding;
-        display: flex;
-        justify-content: center;
+        padding: 80px 70px 0 36px;
 
-        $support-d: 30px;
-        $support-d-half: $support-d / 2;
         .play-bar-support {
           position: absolute;
-          left: $img-left-padding + $img-outer-border-d / 2 - $support-d / 2;
-          top: -$support-d-half;
-          width: $support-d;
-          height: $support-d;
+          left: calc(36px + 160px - 15px);
+          top: -15px;
+          width: 30px;
+          height: 30px;
           z-index: 2;
         }
 
@@ -362,9 +375,9 @@ $img-outer-d: 300px;
           $h: 146px;
           position: absolute;
           top: 0;
-          left: $img-left-padding + $img-outer-border-d / 2 - 6px;
-          width: $w;
-          height: $h;
+          left: calc(36px + 160px - 6px);
+          width: 100px;
+          height: 146px;
           z-index: 1;
           transform-origin: 0 0;
           transform: rotate(-30deg);
@@ -376,12 +389,13 @@ $img-outer-d: 300px;
         }
 
         .img-outer-border {
-          @include round($img-outer-border-d);
+          @include round(320px);
           @include flex-center;
-          background: var(--song-shallow-grey-bg);
+          background-color: #e6e5e6;
+          // background-color: #2A2A2A;
 
           .img-outer {
-            @include round($img-outer-d);
+            @include round(300px);
             @include flex-center;
             background: #000;
             background: linear-gradient(-45deg, #333540, #070708, #333540);
@@ -410,9 +424,9 @@ $img-outer-d: 300px;
     }
 
     .right {
-      // background-color: yellow;
-      flex: 1;
+      float: left;
       padding-top: 5px;
+      height: 100%;
       .name-wrap {
         display: flex;
         align-items: center;
@@ -496,6 +510,7 @@ $img-outer-d: 300px;
     display: flex;
     justify-content: center;
     padding-top: 10px;
+    gap: 60px;
     .play {
       background: #fff;
       border-radius: 10px;
@@ -503,29 +518,42 @@ $img-outer-d: 300px;
 
       box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     }
-    >img {
-      width: 48px;
-      height: 48px;
-      background-color: pink;
+    > img {
+      width: 44px;
+      height: 44px;
+    }
+    .lyric-show {
+      display: none;
     }
   }
 }
 
-
-
 /* 当屏幕宽度小于768px时应用此样式 */
 @media (max-width: 767px) {
-    .paly-song-container {
+  .paly-song-container {
     .song {
-      .left{
+      .left {
         width: 100%;
         padding: 0;
         justify-content: center;
+        .left-top {
+          padding: 70px 0 0 0;
+          height: 380px;
+          .img-outer-border {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+        }
       }
-      .right{
-        display: none;
+      .right {
+        width: 0px;
+        height: 440px;
+      }
+      .lyric-show {
+        display: block;
       }
     }
-    }
+  }
 }
 </style>

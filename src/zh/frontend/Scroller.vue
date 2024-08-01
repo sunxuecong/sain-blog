@@ -32,7 +32,9 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      scroller:null
+    }
   },
   methods: {
     getScroller() {
@@ -47,10 +49,12 @@ export default {
       handler() {
         this.$nextTick(() => {
           if (!this.scroller) {
+            console.log('data数据改变了');
             this.scroller = new BScroll(
               this.$refs.scroller,
               Object.assign({}, defaultOptions, this.options)
             )
+            console.log('滚动态哦创建成功');
             this.$emit("init", this.scroller)
           } else {
             this.scroller && this.scroller.refresh()
@@ -68,6 +72,9 @@ export default {
   position: relative;
   overflow: hidden;
   height: 100%;
+  // height: 100px;
+  // background: pink;
+
 
   .bscroll-indicator {
     border: none !important;
