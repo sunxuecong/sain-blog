@@ -1,28 +1,47 @@
 {
-  "name": "sain-admin-docs",
-  "version": "1.0.0",
-  "description": "",
+  "name": "Sain-notes",
   "type": "module",
-  "scripts": {
-    "dev": "vitepress dev --host",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.0.0",
+  "description": "Development related notes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunxuecong/sain-blog"
   },
-  "author": "",
   "license": "MIT",
+  "homepage": "https://sunxuecong.github.io/sain-blog",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vitepress dev docs --port=8732 --host",
+    "build": "vitepress build docs",
+    "build:github": "cross-env APP_BASE_PATH=/sain-blog/ npm run build",
+    "build:docs": "vitepress build docs",
+    "preview": "vitepress preview docs --port 8730",
+    "lint": "prettier --write .",
+    "prepare": "husky install"
+  },
   "devDependencies": {
+    "@mdit-vue/shared": "^0.12.1",
+    "@octokit/rest": "^19.0.13",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.17.15",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.9",
+    "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "medium-zoom": "^1.0.8",
+    "prettier": "^2.8.8",
+    "sass": "^1.67.0",
+    "sitemap": "^7.1.1",
+    "vitepress": "1.0.1",
+    "vue": "^3.3.4",
     "lodash-es": "^4.17.15",
     "element-ui": "^2.10.1",
-    "@better-scroll/core": "^2.0.0-alpha.20",
-    "@better-scroll/mouse-wheel": "^2.0.0-alpha.20",
-    "@better-scroll/scroll-bar": "^2.0.0-alpha.20",
     "axios": "^0.21.1",
-    "better-scroll": "^1.15.2",
-    "less": "^4.2.0",
-    "sass": "^1.77.8",
-    "vitepress": "^1.0.1"
+    "less": "^4.2.0"
   },
   "dependencies": {
-    "element-plus": "^2.7.7"
+    "better-scroll": "^2.5.1"
   }
 }
